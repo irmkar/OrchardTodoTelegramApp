@@ -1,0 +1,76 @@
+@{
+    Layout = "_Layout";
+}
+
+<div id="app" class="container mt-5">
+    <h2 class="mb-4">Edit To-Do</h2>
+
+    <form v-on:submit.prevent="editTodo" class="form-group">
+        <label for="title">Baþlýk:</label>
+        <input v-model="title" id="title" class="form-control mb-3" placeholder="Edit the title" />
+
+        <div class="form-check d-flex align-items-center mb-3">
+            <input type="checkbox" v-model="isCompleted" id="isCompleted" class="form-check-input mr-2" />
+            <label for="isCompleted" class="form-check-label mr-3">Is it completed?</label>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Vue({
+            el: '#app',
+            data: {
+                    title: '', // Düzenlenecek To-Do'nun baþlýðý
+                    isCompleted: false  // Düzenlenecek To-Do'nun tamamlanma durumu
+            },
+            mounted() {
+                // Sayfa yüklendiðinde mevcut To-Do öðesini alacaðýz
+                this.loadTodo();
+            },
+            methods: {
+                async loadTodo() {
+                    // URL'den ID'yi almak için kullanýlýr (örn: /Edit/5)
+                    const urlParams = new URLSearchParams(window.location.search);
+                    this.todoId = urlParams.get('id');
+
+                    const response = await fetch(`/OrchardTodoTelegramApp.Module/Todo/Get?id=${this.todoId}`);
+                    if (response.ok) {
+                        const todo = await response.json();
+                        this.title = todo.title;
+                        this.isCompleted = todo.isCompleted;
+                    } else {
+                        alert('An error occurred while updating the To-Do.');
+                    }
+                },
+                async editTodo() {
+                    const updatedTodo = {
+                        RowKey: this.todoId,
+                        Title: this.title,
+                        IsCompleted: this.isCompleted
+                    };
+
+                    const response = await fetch('/OrchardTodoTelegramApp.Module/Todo/Edit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(updatedTodo)
+                    });
+
+                    if (response.ok) {
+                        alert('To-Do was successfully updated!');
+                        window.location.href = '/OrchardTodoTelegramApp.Module/Todo/Index'; // Liste sayfasýna geri dön
+                    } else {
+                        alert('An error occurred while updating the To-Do.');
+                    }
+                }
+            }
+        });
+
+    });
+</script>

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardTodoTelegramApp", "OrchardTodoTelegramApp\OrchardTodoTelegramApp.csproj", "{EBC28AE7-8A64-4271-8EF4-BC0226B5AFA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{B7AA4D20-DBD8-4C61-A87C-9AD8A57558CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardTodoTelegramApp.Module", "Modules\OrchardTodoTelegramApp.Module\OrchardTodoTelegramApp.Module.csproj", "{06FAC4B7-2087-4429-A21F-2E509C0B362C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB7AFDC1-0D36-4863-A4E1-72B2A049BB46}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBC28AE7-8A64-4271-8EF4-BC0226B5AFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC28AE7-8A64-4271-8EF4-BC0226B5AFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC28AE7-8A64-4271-8EF4-BC0226B5AFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC28AE7-8A64-4271-8EF4-BC0226B5AFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FAC4B7-2087-4429-A21F-2E509C0B362C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FAC4B7-2087-4429-A21F-2E509C0B362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FAC4B7-2087-4429-A21F-2E509C0B362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FAC4B7-2087-4429-A21F-2E509C0B362C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06FAC4B7-2087-4429-A21F-2E509C0B362C} = {B7AA4D20-DBD8-4C61-A87C-9AD8A57558CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7107DCC-FD41-416F-87E0-F3A08E2E39E9}
+	EndGlobalSection
+EndGlobal
