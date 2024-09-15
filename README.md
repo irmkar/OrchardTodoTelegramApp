@@ -62,8 +62,9 @@ Projeyi çalýþtýrmadan önce aþaðýdaki baðýmlýlýklarýn kurulu olduðundan emin olun
 
 Admin paneline giriþ yapabilmek için aþaðýdaki bilgileri kullanabilirsiniz:
 
-**Kullanýcý Adý: admin**
-**Þifre: Admin@123**
+- Kullanýcý Adý: <span style="color: red;">admin</span>
+- Þifre: <span style="color: red;">Admin@123</span>
+
 
 ### Telegram Botu Kullanýmý
 
