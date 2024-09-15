@@ -60,6 +60,11 @@ Projeyi çalýþtýrmadan önce aþaðýdaki baðýmlýlýklarýn kurulu olduðundan emin olun
 
 ## Kullaným
 
+Admin paneline giriþ yapabilmek için aþaðýdaki bilgileri kullanabilirsiniz:
+
+**Kullanýcý Adý: admin**
+**Þifre: Admin@123**
+
 ### Telegram Botu Kullanýmý
 
 1. Botunuzu [BotFather](https://core.telegram.org/bots#botfather) üzerinden oluþturun ve API token'ýnýzý alýn.
@@ -71,7 +76,7 @@ Projeyi çalýþtýrmadan önce aþaðýdaki baðýmlýlýklarýn kurulu olduðundan emin olun
 Projeyi ilk çalýþtýrdýðýnýzda, varsayýlan olarak Orchard Core Framework'ün karþýlama sayfasý açýlýr. Bu sayfa, site baþarýlý bir þekilde oluþturulduðunda görüntülenen bir "Hoþ geldiniz" mesajýný içerir.
 
 #### To-Do Modülüne Eriþim
-Projenin temel iþlevlerinden biri, To-Do List modülüdür. Bu modül, admin paneli üzerinden yönetilebilir ve kullanýcýya basit bir yapýlacaklar listesi sunar. Admin panelindeki sol navigasyon menüsünde To-Do List baðlantýsýna týklayarak modüle eriþebilirsiniz.
+Projenin temel iþlevlerinden biri, To-Do List modülüdür. Bu modül, admin paneli üzerinden yönetilebilir ve kullanýcýya basit bir yapýlacaklar listesi sunar. Admin panelindeki sol navigasyon menüsünde "Orchard To-Do App Management" baðlantýsýna týklayarak modüle eriþebilirsiniz.
 
 - URL: /Module/Todo
 
